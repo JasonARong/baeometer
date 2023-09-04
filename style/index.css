@@ -1,0 +1,131 @@
+@import url("./global.css");
+
+* {
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  backdrop-filter: blur(14.5px);
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.bg{
+  background: rgba(108, 51, 230, 0.49);
+  backdrop-filter: blur(14.5px);
+}
+body {
+  font-size: 14px;
+  background-image: url('../img/Background.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  
+}
+
+
+#heart{
+  position: absolute;
+  transform: translate(-80px, -60px);
+  z-index: -1;
+}
+#content{
+  position: absolute;
+  transform: translate(350px, 135px);
+}
+
+.content1 {
+  /* position: absolute; */
+  width: 147px;
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #ffffff;
+}
+
+
+#titleAndBtn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  gap: 100px;
+}
+
+.BAE-O-METER {
+  display: block;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  color: #fff;
+
+  margin-bottom: 20px;
+}
+
+.Bae h1:nth-child(1) span{
+  color: transparent;
+  background: linear-gradient(90deg, #f9b1b1 49.86%, #db8fff 100%), linear-gradient(0deg, #ffffff, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Bae h1:nth-child(2) {
+  color: #ffffff;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(0% 45%, 16% 44%, 33% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+  }
+}
+
+.Predicts {
+  font-family: 'Inter';
+  font-size: 25px;
+  color: #ffffff;
+}
+
+
+
+
+
+
+/* responsive design */
+/* Small Screen */
+@media only screen and (max-width: 767px), 
+screen and (max-height: 480px) {
+
+  #heart{
+    width: 170px;
+    transform: translate(-40px, -30px);
+    opacity: 0.8;
+  }
+  #content{
+    display: none;
+  }
+
+
+  .BAE-O-METER {
+    font-size: 40px;
+  }
+  .Predicts{
+    font-size: 20px;
+  }
+}
